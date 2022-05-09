@@ -6,7 +6,7 @@
   [checked]="isChecked"
   (change)="onChange($event)"
 >
-  Woh ah yoh doyng iin Jonehs seet?!?
+  Woh ah yoh doyng iin Jonnehs seet?!?
 </mat-checkbox><br>
 
 
@@ -37,3 +37,28 @@
     {{ color.name }}
   </mat-option>
 </mat-select>
+
+
+<br>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+</form>
+
+<mat-form-field>
+  <input ngModel name="username" type="text" matInput placeholder="Username" required>
+  <mat-hint>Type a unique username</mat-hint>
+  <span matSuffix>@domain.com</span>
+  <span matPrefix>admin.</span>
+  <mat-error>
+    The username field is required
+  </mat-error>
+</mat-form-field>
