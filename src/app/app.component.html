@@ -1,2 +1,39 @@
 <mat-checkbox>Hello There</mat-checkbox><br>
-<mat-checkbox color="primary">General Kenobi</mat-checkbox>
+<mat-checkbox color="primary">General Kenobi</mat-checkbox><br>
+
+
+<mat-checkbox
+  [checked]="isChecked"
+  (change)="onChange($event)"
+>
+  Woh ah yoh doyng iin Jonehs seet?!?
+</mat-checkbox><br>
+
+
+<mat-checkbox
+  #showDetails
+>
+  Show Details
+</mat-checkbox>
+<div *ngIf="showDetails.checked">
+  <ul>
+    <li *ngFor="let list of listObjects; index as i">
+      {{ list.name }}
+    </li>
+  </ul>
+</div>
+
+<br>
+<mat-radio-group value="">
+  <mat-radio-button value="1">Male</mat-radio-button>
+  <mat-radio-button value="2">Female</mat-radio-button>
+</mat-radio-group>
+
+
+<br>
+<br>
+<mat-select placeholder="Choose a color...">
+  <mat-option *ngFor="let color of colors" value="color.id">
+    {{ color.name }}
+  </mat-option>
+</mat-select>
